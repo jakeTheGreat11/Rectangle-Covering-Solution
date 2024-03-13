@@ -24,6 +24,23 @@ public class Main {
 
     }
 
+    //      THIS WAS MY FIRST ANSWER
+//    public static List<Double> rectangleCovering(Rectangle[] rectangles){
+//        List<Double> lines = new ArrayList<>();
+//        for (int i = 0; i < rectangles.length; i++) {
+//            boolean isCovered = false;                  // a flag to check if there is a rectangle touching or inside rectangle i
+//            for (int j = 0; j < rectangles.length; j++) {
+//                if (i!=j && (rectangles[j].getLeft()>=rectangles[i].getLeft() && rectangles[j].getLeft()<= rectangles[i].getRight())){ //checks if the left of rectangle j is in between rectangle i's left and right
+//                    isCovered = true;
+//                    break;
+//                }
+//            }
+//            if (!isCovered){ //if the rectangle is not covered by other rectangles then add line in the beginning of the rectangle
+//                lines.add(rectangles[i].getLeft());
+//            }
+//        }return lines;
+//    }
+
     public static List<Double> rectangleCovering(Rectangle[] rectangles){
         List<Double> lines = new ArrayList<>();
         Arrays.sort(rectangles, Comparator.comparingDouble(Rectangle::getRight));
